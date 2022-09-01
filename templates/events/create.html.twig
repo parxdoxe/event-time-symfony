@@ -1,0 +1,65 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+	<div class="flex justify-center items-center h-[80vh] mt-10">
+
+		{{ form_start(form, {'attr': {'class': 'w-[30%] '}})  }}
+		<div class="bg-[#fff] rounded-lg drop-shadow-xl">
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center my-3" for="event_image">Image :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.image, {'attr': {'class': 'h-[30px] w-[80%]'}}) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_name">Nom :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.name, {'attr': {'class': 'h-[30px] w-[80%]'}}) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_description">Description :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.description, {'attr': {'class': 'h-[30px] w-[80%]'}}) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_price">Prix :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.price, {'attr': {'class': 'h-[30px] w-[80%]'}}) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_date_created">Date de création :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.date_created) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_date_start">Date de début :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.date_start) }}
+                </div>
+			</div>
+
+			<div class="flex justify-center flex-col">
+                <label class="text-center mt-3" for="event_date_end">Date de fin :</label>
+                <div class="flex items-center justify-center w-[100%]">
+                {{ form_widget(form.date_end) }}
+                </div>
+			</div>
+            
+            <div class="flex justify-center ">
+            
+			<button class="text-center my-2 p-2 bg-[#111827] text-white rounded-lg hover:opacity-80" formnovalidate>Créer l'événement</button>
+            </div>
+		</div>
+		{{ form_end(form) }}
+	</div>
+{% endblock %}
